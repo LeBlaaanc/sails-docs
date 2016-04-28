@@ -17,9 +17,9 @@ Then use it in one of your controllers:
   uploadFile: function (req, res) {
     req.file('avatar').upload({
       adapter: require('skipper-s3'),
-      key: 'S3 Key'
-      secret: 'S3 Secret'
-      bucket: 'Bucket Name'
+      key: 'S3 Key',
+      secret: 'S3 Secret',
+      bucket: 'Bucket Name',
     }, function (err, filesUploaded) {
       if (err) return res.negotiate(err);
       return res.ok({
